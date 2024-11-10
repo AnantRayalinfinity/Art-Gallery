@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwick Smith - Web Developer & Designer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #007bff;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h2 {
+            color: red;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: rgb(80, 72, 72);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color:red;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Riwick Smith</h1>
+    <p>Web Developer & Designer</p>
+</header>
+
+<nav>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+    <h2>About Me</h2>
+    <p>Hello! I'm Riwick Smith, a passionate web developer with a love for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and more.</p>
+
+    <h2>My Projects</h2>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Project 1</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        </tr>
+        <tr>
+            <td>Project 2</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        </tr>
+    </table>
+
+    <h2>Project Statistics</h2>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Technologies</th>
+            <th>Completion Date</th>
+        </tr>
+        <tr>
+            <td>Project 1</td>
+            <td>HTML, CSS, JavaScript</td>
+            <td>June 2024</td>
+        </tr>
+        <tr>
+            <td>Project 2</td>
+            <td>React, Node.js</td>
+            <td>August 2024</td>
+        </tr>
+    </table>
+
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact-method">Preferred Contact Method:</label>
+        <input type="radio" id="email-method" name="contact-method" value="email" checked>
+        <label for="email-method">Email</label>
+        <input type="radio" id="phone-method" name="contact-method" value="phone">
+        <label for="phone-method">Phone</label>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+
+        <input type="submit" value="Send">
+    </form>
+</section>
+
+<footer>
+    &copy; 2024 Riwick Smith. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Device Simulation Portal</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #1c1f39, #2c3e50, #34495e, #2c3e50);
+      background-size: 400% 400%;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      backdrop-filter: blur(10px) saturate(180%);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      grid-column: 1 / -1;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .device-card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .device-card:hover {
+      transform: scale(1.05);
+    }
+
+    .device-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .device-icon {
+      font-size: 50px;
+      transition: color 0.3s;
+    }
+
+    .status {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .toggle-button {
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      margin-top: 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .toggle-button:hover {
+      background: linear-gradient(90deg, #66bb6a, #4caf50);
+      transform: scale(1.1);
+    }
+
+    .on .device-icon {
+      color: #4caf50;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>IoT Device Simulation Portal</h1>
+
+    <!-- Smart Light Card -->
+    <div class="device-card" id="light-card">
+      <img src="https://via.placeholder.com/50/ffeb3b/000?text=L" class="device-image" alt="Light Image">
+      <div>
+        <i class="fas fa-lightbulb device-icon" id="light-icon"></i>
+        <h2>Smart Light</h2>
+        <div class="status" id="light-status">Status: OFF</div>
+        <button class="toggle-button" onclick="toggleDevice('light')">Toggle Light</button>
+      </div>
+    </div>
+
+    <!-- Smart Fan Card -->
+    <div class="device-card" id="fan-card">
+      <img src="https://via.placeholder.com/50/00bcd4/000?text=F" class="device-image" alt="Fan Image">
+      <div>
+        <i class="fas fa-fan device-icon" id="fan-icon"></i>
+        <h2>Smart Fan</h2>
+        <div class="status" id="fan-status">Status: OFF</div>
+        <button class="toggle-button" onclick="toggleDevice('fan')">Toggle Fan</button>
+      </div>
+    </div>
+
+    <!-- Smart AC Card -->
+    <div class="device-card" id="ac-card">
+      <img src="https://via.placeholder.com/50/03a9f4/000?text=A" class="device-image" alt="AC Image">
+      <div>
+        <i class="fas fa-snowflake device-icon" id="ac-icon"></i>
+        <h2>Smart AC</h2>
+        <div class="status" id="ac-status">Status: OFF</div>
+        <button class="toggle-button" onclick="toggleDevice('ac')">Toggle AC</button>
+      </div>
+    </div>
+
+    <!-- Smart TV Card -->
+    <div class="device-card" id="tv-card">
+      <img src="https://via.placeholder.com/50/4caf50/000?text=T" class="device-image" alt="TV Image">
+      <div>
+        <i class="fas fa-tv device-icon" id="tv-icon"></i>
+        <h2>Smart TV</h2>
+        <div class="status" id="tv-status">Status: OFF</div>
+        <button class="toggle-button" onclick="toggleDevice('tv')">Toggle TV</button>
+      </div>
+    </div>
+
+    <!-- Security Camera Card -->
+    <div class="device-card" id="camera-card">
+      <img src="" class="device-image" alt="Camera Image">
+      <div>
+        <i class="fas fa-video device-icon" id="camera-icon"></i>
+        <h2>Security Camera</h2>
+        <div class="status" id="camera-status">Status: OFF</div>
+        <button class="toggle-button" onclick="toggleDevice('camera')">Toggle Camera</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initial state of devices
+    let devices = {
+      light: false,
+      fan: false,
+      ac: false,
+      tv: false,
+      camera: false
+    };
+
+    // Toggle function to switch ON/OFF devices
+    function toggleDevice(device) {
+      devices[device] = !devices[device];
+      document.getElementById(`${device}-status`).innerText = `Status: ${devices[device] ? 'ON' : 'OFF'}`;
+      const card = document.getElementById(`${device}-card`);
+      card.classList.toggle('on', devices[device]);
+    }
+  </script>
+</body>
+
+</html>
+
+
+

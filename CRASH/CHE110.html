@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e8f5e9, #b2ebf2);
+            color: #333;
+        }
+
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe082;
+            transform: scale(1.2);
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        footer {
+            background: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .quiz-container {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .answer-button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .answer-button:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .source-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .source-image:hover {
+            transform: scale(1.1);
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Renewable Energy Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#renewable-sources">Renewable Sources</a></li>
+                <li><a href="#sustainable-dev">Sustainable Development</a></li>
+                <li><a href="#quiz">Fun Quiz</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="renewable-sources">
+        <h2>Renewable Energy Sources</h2>
+        <p>Explore the various sources of renewable energy that are transforming the world.</p>
+        <div>
+            <h3>Solar Energy</h3>
+            <img src="renewable energy.jpeg" alt="Solar Energy" class="source-image">
+            <p>Solar energy is harnessed from the sun using photovoltaic cells.</p>
+        </div>
+        <div>
+            <h3>Wind Energy</h3>
+            <img src="wind energy.jpeg" alt="Wind Energy" class="source-image">
+            <p>Wind energy is generated using wind turbines to convert kinetic energy into electricity.</p>
+        </div>
+        <div>
+            <h3>Hydropower</h3>
+            <img src="hydropower energy.jpeg" alt="Hydropower" class="source-image">
+            <p>Hydropower is generated from the movement of water, typically from rivers and dams.</p>
+        </div>
+        <div>
+            <h3>Geothermal Energy</h3>
+            <img src="geothermal energy.jpeg" alt="Geothermal Energy" class="source-image">
+            <p>Geothermal energy is derived from the heat stored beneath the Earth's surface.</p>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>Test Your Knowledge</h2>
+        <button id="start-quiz">Start Quiz</button>
+        <div class="quiz-container" id="quiz-container">
+            <h3 id="quiz-question"></h3>
+            <button class="answer-button" data-answer="A"></button>
+            <button class="answer-button" data-answer="B"></button>
+            <button class="answer-button" data-answer="C"></button>
+            <button class="answer-button" data-answer="D"></button>
+            <p class="feedback" id="quiz-feedback"></p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: TeamANG@renewableenergy.com</p>
+    </footer>
+
+    <script>
+        document.getElementById("start-quiz").addEventListener("click", function() {
+            const quizContainer = document.getElementById("quiz-container");
+            quizContainer.style.display = "block";
+            displayQuestion();
+        });
+
+        const questions = [
+            { question: "What is a renewable energy source?", answers: { A: "Solar", B: "Wind", C: "Hydropower", D: "All of the above" }, correct: "D" },
+            { question: "Which of the following is NOT a renewable energy source?", answers: { A: "Natural Gas", B: "Wind", C: "Solar", D: "Geothermal" }, correct: "A" },
+            { question: "What device converts sunlight into electricity?", answers: { A: "Windmill", B: "Solar Panel", C: "Dam", D: "Generator" }, correct: "B" },
+            { question: "Which energy source depends on tides?", answers: { A: "Solar", B: "Tidal", C: "Geothermal", D: "Nuclear" }, correct: "B" },
+            { question: "What is the primary source of wind energy?", answers: { A: "Sun", B: "Moon", C: "Earth", D: "Ocean Currents" }, correct: "A" },
+            { question: "Which energy source can run 24/7?", answers: { A: "Solar", B: "Geothermal", C: "Wind", D: "Tidal" }, correct: "B" },
+            { question: "Which renewable energy source has the highest installation cost?", answers: { A: "Wind", B: "Solar", C: "Hydropower", D: "Geothermal" }, correct: "C" },
+            { question: "Which is the most widely used renewable energy source?", answers: { A: "Solar", B: "Wind", C: "Hydropower", D: "Geothermal" }, correct: "C" },
+            { question: "Which energy source is growing the fastest?", answers: { A: "Solar", B: "Wind", C: "Hydropower", D: "Tidal" }, correct: "A" },
+            { question: "Which energy source emits zero greenhouse gases?", answers: { A: "Coal", B: "Solar", C: "Oil", D: "Natural Gas" }, correct: "B" }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function displayQuestion() {
+            const question = questions[currentQuestionIndex];
+            document.getElementById("quiz-question").innerText = question.question;
+
+            const answerButtons = document.querySelectorAll(".answer-button");
+            answerButtons.forEach(button => {
+                button.innerText = question.answers[button.dataset.answer];
+                button.onclick = () => selectAnswer(button.dataset.answer);
+            });
+        }
+
+        function selectAnswer(selectedAnswer) {
+            const question = questions[currentQuestionIndex];
+            const feedbackElement = document.getElementById("quiz-feedback");
+            feedbackElement.innerText = selectedAnswer === question.correct ? "Correct! Well done ✅." : "Wrong answer❌";
+            currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+            setTimeout(() => {
+                feedbackElement.innerText = '';
+                displayQuestion();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

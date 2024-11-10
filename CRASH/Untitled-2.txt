@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .profile-card {
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .profile-card div {
+            padding: 15px;
+            color: white;
+        }
+        .profile-pic {
+            background-color: #8bc34a;
+            text-align: center;
+        }
+        .profile-pic img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .name {
+            background-color: #2196f3;
+            text-align: center;
+        }
+        .bio {
+            background-color: #ff9800;
+        }
+        .contact {
+            background-color: #9c27b0;
+        }
+        .footer {
+            background-color: #f44336;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-pic">
+            <img src="" alt="Profile Picture">
+        </div>
+        <div class="name">
+            <h2>John Doe</h2>
+            <p>Web Developer at Tech Solutions</p>
+        </div>
+        <div class="bio">
+            <p>Passionate about creating interactive web designs that enhance user experience and functionality. Experienced in HTML, CSS, JavaScript, and responsive design.</p>
+        </div>
+        <div class="contact">
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="footer">
+            <p>Footer Links</p>
+        </div>
+    </div>
+
+</body>
+</html>

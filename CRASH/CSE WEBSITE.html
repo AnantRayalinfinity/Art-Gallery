@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f6f6f6;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #d1c629;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f8d775;
+        }
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 18px;
+        }
+        .section-title {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .section-title h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .about-section {
+            padding: 40px 50px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .about-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .gallery-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0 50px;
+            margin-bottom: 50px;
+        }
+        .gallery-item {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+        .gallery-item h3 {
+            margin: 20px 0 10px;
+            font-size: 22px;
+            color: #555;
+        }
+        .gallery-item p {
+            font-size: 16px;
+            color: #777;
+        }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #f8d775;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color:#c9c267;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Art Gallery</h1>
+        <p>Experience the beauty of modern art</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="ABOUTUS.html" target="_blank">About Us</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <section id="home" class="section-title">
+        <h2>Elevate Your Art Experience</h2>
+        <p>Explore our latest collection of artistic gems</p>
+    </section>
+    <section id="about" class="about-section">
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-item">
+            <img src="ART 1.png" alt="Art Piece 1">
+            <h3>Abstract Reality</h3>
+            <p>Explore the abstract interpretation of reality.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART 1.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art 2.jpg" alt="Art Piece 2">
+            <h3>Modern Portrait</h3>
+            <p>An artistic representation of modern identity.</p>
+            <div class="btn-container">
+                <a href="art2.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art 3.jpg" alt="Art Piece 3">
+            <h3>Colors of Life</h3>
+            <p>Dive into a vibrant world of color and expression.</p>
+            <div class="btn-container">
+                <a href="art3.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art 4.jpg" alt="Art Piece 4">
+            <h3>Reflections of Chaos</h3>
+            <p>Dive into a scene of abstract chaos, where every shape tells a story of struggle and resilience.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART4.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art7.jpeg" alt="Art Piece 5">
+            <h3>Eternal Muse</h3>
+            <p>This piece captures the soulful gaze of a modern muse, blending tradition with bold, contemporary colors.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART7.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art 6.jpg" alt="Art Piece 6">
+            <h3>Dreamscape Awakening</h3>
+            <p>A surreal portrait bringing dreams to life, showcasing the boundless potential of imagination.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART6.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art8.jpeg" alt="Art Piece 7">
+            <h3>Fragmented Thoughts</h3>
+            <p>Explore a deeply introspective piece that reflects the fragmented and multifaceted nature of human identity.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART8.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="art9.jpeg" alt="Art Piece 8">
+            <h3>Whispers of the Past</h3>
+            <p>A nostalgic portrayal with a minimalistic touch, blending elegance with quiet introspection.</p>
+            <div class="btn-container">
+                <a href="CSE326 ART9.html" target="_blank">
+                    <button class="btn">Explore</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="art10.jpeg" alt="Art Piece 9">
+            <h3>Beyond the Horizon</h3>
+            <p>A journey through surreal landscapes that challenge perceptions and
+                ignite the imagination.</p>
+                <div class="btn-container">
+                    <a href="CSE326 ART10.html" target="_blank">
+                        <button class="btn">Explore</button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="gallery-item">
+                <img src="art11.jpeg" alt="Art Piece 10">
+                <h3>Harmony in Chaos</h3>
+                <p>An intricate blend of colors and shapes, portraying balance amidst disorder.</p>
+                <div class="btn-container">
+                    <a href="CSE326 ART11.html" target="_blank">
+                        <button class="btn">Explore</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Quotes Section -->
+            <!-- Quotes Section -->
+    <section class="quotes-section" style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
+        <h2 style="font-size: 28px; color: #333; margin-bottom: 20px;">Inspiring Art Quotes</h2>
+        <p style="font-size: 18px; color: #d14d72; margin-bottom: 10px;">
+            "Art is not what you see, but what you make others see." – Edgar Degas
+        </p>
+        <p style="font-size: 18px; color: #4d72d1; margin-bottom: 10px;">
+            "The purpose of art is washing the dust of daily life off our souls." – Pablo Picasso
+        </p>
+        <p style="font-size: 18px; color: #72d14d; margin-bottom: 10px;">
+            "Creativity takes courage." – Henri Matisse
+        </p>
+        <p style="font-size: 18px; color: #d1a74d; margin-bottom: 10px;">
+            "Every artist was first an amateur." – Ralph Waldo Emerson
+        </p>
+        <p style="font-size: 18px; color: #4dd1b5; margin-bottom: 10px;">
+            "Art enables us to find ourselves and lose ourselves at the same time." – Thomas Merton
+        </p>
+    </section>
+
+    
+        <footer>
+            <p>&copy; 2024 Art Gallery. All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html>
+    
+
+
+
